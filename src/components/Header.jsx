@@ -8,6 +8,13 @@ import {
   ChevronDown
 } from 'lucide-react';
 
+import emblemOfIndia from '../assets/image2.png';
+import ministryOfHealth from '../assets/image1.png';
+import ministryOfHealthMobile from '../assets/image1.png';
+import aapleSarkar from '../assets/image2.png';
+import ministryLogo from '../assets/image1.png';
+import digitalIndia from '../assets/image.png';
+
 // Translation data
 const translations = {
   en: {
