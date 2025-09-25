@@ -29,7 +29,7 @@ const events = [
 ];
 
 const RecentEvents = () => {
-  // Create refs for navigation buttons
+  // Create refs for the navigation buttons
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -75,8 +75,10 @@ const RecentEvents = () => {
                 el: '.swiper-pagination-custom',
                 clickable: true,
               }}
-              navigation={{ enabled: true }}
-              // ✅ Properly link refs before init
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
               onBeforeInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
@@ -99,8 +101,8 @@ const RecentEvents = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* Custom Pagination */}
+            
+            {/* Custom Pagination container */}
             <div className="swiper-pagination-custom flex justify-center mt-6 gap-2"></div>
           </div>
         </div>
