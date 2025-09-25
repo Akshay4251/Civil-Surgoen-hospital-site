@@ -14,12 +14,18 @@ import 'swiper/css/pagination';
 // Import icons
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-// Dummy data for event images (replace with your actual event data)
+// ✅ Import event images properly
+import slider1 from '../assets/slider1.jpg';
+import slider2 from '../assets/slider2.jpg';
+import slider3 from '../assets/slider3.jpg';
+import slider4 from '../assets/slider4.jpg';
+
+// Event Data
 const events = [
-  { id: 1, image: './src/assets/slider1.jpg' },
-  { id: 2, image: './src/assets/slider2.jpg' },
-  { id: 3, image: './src/assets/slider3.jpg' },
-  { id: 4, image: './src/assets/slider4.jpg' },
+  { id: 1, image: slider1 },
+  { id: 2, image: slider2 },
+  { id: 3, image: slider3 },
+  { id: 4, image: slider4 },
 ];
 
 const RecentEvents = () => {
@@ -73,7 +79,6 @@ const RecentEvents = () => {
                 prevEl: prevRef.current,
                 nextEl: nextRef.current,
               }}
-              // This is necessary to link the custom buttons to Swiper's navigation
               onBeforeInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
@@ -82,7 +87,7 @@ const RecentEvents = () => {
                 640: { slidesPerView: 2, spaceBetween: 20 },
                 1024: { slidesPerView: 3, spaceBetween: 30 },
               }}
-              className="!pb-12" // Add padding-bottom to make space for pagination
+              className="!pb-12"
             >
               {events.map((event) => (
                 <SwiperSlide key={event.id}>

@@ -8,6 +8,8 @@ import Footer from './components/Footer'
 import RecentEvents from './components/RecentEvents'
 import Dashboard from './components/Dashboard'
 import About from './components/About'
+import Sidebar from './components/Sidebar'
+import Hospitals from './components/Hospitals'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Dashboard/>
       <About/>
       <Chatbot />
+      <Sidebar/>
+      <Hospitals/>
       <Footer/>
     </div>
   )
