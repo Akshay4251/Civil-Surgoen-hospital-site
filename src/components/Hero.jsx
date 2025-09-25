@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, Users, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
+// Import slider images
+import slider1 from '../assets/slider1.jpg';
+import slider2 from '../assets/slider2.jpg';
+import slider3 from '../assets/slider3.jpg';
+import slider4 from '../assets/slider4.jpg';
+
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -11,22 +17,22 @@ const HeroSection = () => {
     { icon: Calendar, value: '50+', label: 'Years of Service' }
   ];
 
-  // Slider images - you can replace these with your actual hospital images
+  // Slider images using imported images
   const sliderImages = [
     {
-      url: "./src/assets/slider1.jpg",
+      url: slider1,
       alt: "Hospital Building"
     },
     {
-      url: "./src/assets/slider2.jpg",
+      url: slider2,
       alt: "Hospital Reception"
     },
     {
-      url: "./src/assets/slider3.jpg",
+      url: slider3,
       alt: "Medical Equipment"
     },
     {
-      url: "./src/assets/slider4.jpg",
+      url: slider4,
       alt: "Operation Theater"
     },
   ];
